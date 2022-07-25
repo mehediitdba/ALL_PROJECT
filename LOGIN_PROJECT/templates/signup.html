@@ -1,0 +1,53 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Sign up</title>
+{% endblock%}
+    
+{% block body %}
+
+    <div class="login-form" style="width: 450px; margin: 100px auto;">
+      <!--
+
+        {% if password_notmatch %}
+        <script>
+            window.alert("Password Not Match");
+        </script>
+        {% endif %}
+
+      -->
+        
+        <form action="{%  url 'login' %}" method="POST" class="loginforms" style="margin-bottom: 15px; background: #f7f7f7; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); padding: 30px; height: 350px; margin-top: 100px;"> 
+            {% csrf_token %}
+            <h2 style="margin: 0 0 15px; text-align: center;">Registration Forms</h2>
+            <div class="cuname">
+                <label for="iduname">User name :</label>
+                <input type="text" id="iduname" placeholder="Username" name="username" style="margin-left: 53px; width: 240px;" required>  
+            </div>
+            <div class="cemail">
+                <label for="idemail">Email :</label>
+                <input type="email" id="idemail" placeholder="Email" name="email" style="margin-left: 91px;  margin-top: 2px; width: 240px;" required>
+            </div>
+            <div class="cpass">
+                <label for="idpass">Password :</label>
+                <input type="password" id="idpass" placeholder="Password" name="password" style="margin-left: 61px; margin-top: 2px; width: 240px;" required>
+            </div>
+            <div class="ccpass">
+                <label for="idcpass">Confrim Password :</label>
+                <input type="password" id="idcpass" placeholder="Confirm Password" name="passwordc" style="margin-top: 2px; width: 240px;" required>
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="submit" id="idbtn" value="Sign Up" style="float: right; width: 75px;">
+            </div>            
+        </form>
+        <p class="text-center text-muted small" name="haveanacc" style="font-size: 10px;"> Do you have an account? <a href="{% url 'login' %}" style="color: blue;">Login here!</a></p>
+        <p class="" name="createemail" style="font-size: 10px;"> Do you Want to Send a Email? <a href="{% url 'email' %}" style="color: blue;">Send Email here!</a></p>
+    </div>
+    
+    
+
+    
+{% endblock %}

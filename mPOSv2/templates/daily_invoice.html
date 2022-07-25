@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>mSoft | Dashboard</title>
+{% endblock%}
+
+{% block content %}
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Daily Invoice</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item active">Invoice</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <div class="row col-md-12 inv_top" style="border-bottom: 1px solid">
+                <div class="col-md-3">
+                  <h5 class="card-title" style="float:left">Daily Invoice</h5>
+                </div>
+                <div class="col-md-3" style="margin-top: 10px;">
+                  <div class="search-bar">
+                    <form class="search-form d-flex align-items-center" method="POST" action="#">
+                      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                      <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                    </form>
+                  </div><!-- End Search Bar -->
+                </div>
+                <div class="col-md-3" style="margin-top: 10px;">
+                  <div class="col-sm-12">
+                      <label for="stdate" class="col-sm-4">Start Date :</label>
+                      <input type="date" class="cstdate" id="stdate">
+                  </div>
+                </div>
+                <div class="col-md-3" style="margin-top: 10px;">
+                  <div class="col-sm-12">
+                      <label for="stdate1" class="col-sm-4">End Date :</label>
+                      <input type="date" class="cstdate" id="stdate1">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 inv-bottom">
+
+              </div>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  {% endblock content %}

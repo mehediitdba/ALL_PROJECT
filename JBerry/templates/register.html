@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBerry | Register</title>
+    <style>
+        form {
+            margin: 10% 0 0 0;
+            transform: scale(1.5);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        form>input {
+            margin: 0 0 1% 0;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        {% if message %}
+        <h3>{{message}}</h3>
+        {% endif %}
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="first_name" placeholder="First Name" required><br>
+            <input type="text" name="last_name" placeholder="First Name" required><br>
+            <input type="text" name="username" placeholder="username" required><br>
+            <input type="email" name="email" placeholder="email" required><br>
+            <input type="password" name="password" required><br>
+            <input type="password" name="cpassword" required><br><br>
+            <input type="submit" value="Register">
+            
+        </form>
+    </center>
+</body>
+
+</html>

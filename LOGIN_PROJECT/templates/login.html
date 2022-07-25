@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Login</title>
+{% endblock%}
+    
+{% block body %}
+<div class="login-form" style=" width: 400px; margin: 30px auto;">
+    <form action="{% url 'home' %}" method="POST" style="margin-bottom: 15px; background: #f7f7f7; box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); padding: 30px; margin-top: 100px;">
+        {% csrf_token %}
+        <h2 class="text-center" style="margin: 0 0 15px;">Sign in</h2>   
+        <div class="form-group">
+        	<div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user"></span>
+                    </span>                    
+                </div>
+                <input type="text" class="form-control" name="username" placeholder="Username" required="required">				
+            </div>
+        </div>
+		<div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend" style="font-size: 18px;">
+                    <span class="input-group-text">
+                        <i class="fa fa-lock" style="font-size: 18px;"></i>
+                    </span>                    
+                </div>
+                <input type="password" class="form-control" name="password" placeholder="Password" required="required" style="border-radius: 2px;">				
+            </div>
+        </div>        
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary login-btn btn-block" value="home" style="border-radius: 2px; font-size: 15px; font-weight: bold; min-height: 40px;">Sign in</button>
+        </div>
+        <div class="clearfix">
+            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+            <a href="#" class="float-right">Forgot Password?</a>
+        </div>
+    </form>
+    {% if login_successful %}
+    <script>
+        window.alert("Login Successful");
+    </script>
+    {% endif %}
+    <p class="text-center text-muted small">Don't have an account? <a href="{% url 'signup' %}">Sign up here!</a></p>
+</div>
+{% endblock %}

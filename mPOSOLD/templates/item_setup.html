@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>mSoft | Item Setup</title>
+{% endblock%}
+
+{% block content %}
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Item Setup</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Home</a></li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item active">Item</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-7">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title" style="border-bottom: 1px solid;">Add Item</h5>
+              <br>
+              <form>
+
+                <div class="row mb-12" style="float: right; margin-right: 20px;">
+                  <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck1" checked>
+                      <label class="form-check-label" for="gridCheck1">
+                        Active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Cat ID :</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputText">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputEmail3" class="col-sm-2 col-form-label">Cat Name :</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail">
+                  </div>
+                </div>
+                <br>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                  <button type="submit" class="btn btn-success">Update</button>
+                  <button type="reset" class="btn btn-warning">Clear</button>
+                  <button type="reset" class="btn btn-danger">Exit</button>
+                </div>
+              </form><!-- End Horizontal Form -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5" >
+          <div class="card" >
+            <div class="card-body">
+              <div class="col-md-12">
+                <div class="col-md-12">
+                  <h5 class="card-title" style="border-bottom: 1px solid;">List Item</h5>
+                </div>
+                <div class="col-md-12">
+                  <div class="search-bar">
+                    <form class="search-form d-flex align-items-center" method="POST" action="#">
+                      <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+                      <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                    </form>
+                  </div><!-- End Search Bar -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  {% endblock content %}
