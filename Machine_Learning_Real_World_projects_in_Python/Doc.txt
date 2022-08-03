@@ -1,0 +1,14 @@
+anazon
+google
+facebook
+yeahoo
+netflex
+flibcut
+
+panda
+numpy
+mat-cotlib
+cbond
+plotlib
+data-extration
+data-manipulation
