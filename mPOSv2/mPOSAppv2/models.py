@@ -27,7 +27,11 @@ class T_category(models.Model):
     catname = models.CharField(max_length=100)
 
 
-
+class T_item_setup(models.Model):
+    itemid = models.IntegerField(primary_key=True, auto_created=True)
+    catid=models.IntegerField(max_length=30)
+    itemactive = models.CharField(max_length=50)
+    itemnae = models.CharField(max_length=100)
 
 def __str__(self) -> str:
     return f'{self.username} | {self.uid}'

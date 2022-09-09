@@ -51,6 +51,12 @@ def category_setup_v(request):
     return render(request, 'category_setup.html', context)
 
 def item_setup(request):
+    if request.method =='POST':
+        catid=request.POST.get('catid')
+        itemactive=request.POST.get('itemactive')
+        itemnae=request.POST.get('itemnae')
+        if itemid is not None:
+            t_item_setup = T_item_setup
     return render(request, template_name='item_setup.html')
 
 def daily_invoice(request):
