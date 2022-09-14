@@ -1,0 +1,10 @@
+D:\P_workspace\HR_VENTURE\ALL_PROJECT> django-admin startproject restfulapicrud
+D:\P_workspace\HR_VENTURE\ALL_PROJECT> cd .\restfulapicrud\
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py startapp personalapi
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> pip install djangorestframework
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> pip install psycopg2
+--change setting.py (db, app)
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py migrate
+--create model
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py makemigrations personalapi
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py migrate
