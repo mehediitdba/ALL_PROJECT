@@ -8,3 +8,9 @@ D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py migrate
 --create model
 D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py makemigrations personalapi
 D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud> python manage.py migrate
+
+
+
+
+
+D:\P_workspace\HR_VENTURE\ALL_PROJECT\restfulapicrud>python manage.py createsuperuser
