@@ -12,26 +12,32 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-md-10 offset-md-1 mt-5">
-            <div class="jumbotron">
-                <h1 class="display-4">Login</h1>
-                <p class="lead font-italic">Python Django Project for implementing Login Page</p>
-                <hr class="my-4">
-
+        <div class="row">
+            <div class="col-md-12">
                 {% if messages %}
                     {% for message in messages %}
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    
+                        <div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 400px; float:right;">
                             {{ message }}
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
 
                     {% endfor %}
                 {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1 mt-5">
+                <div class="jumbotron">
+                    <h1 class="display-4">Login</h1>
+                    <p class="lead font-italic">Python Django Project for implementing Login Page</p>
+                    <hr class="my-4">
 
-                {% block content %}
+                    {% block content %}
 
-                {% endblock content %}
-              </div>
+                    {% endblock content %}
+                </div>
+            </div>
         </div>
     </div>
 
